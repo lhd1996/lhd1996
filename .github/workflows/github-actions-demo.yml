@@ -32,5 +32,11 @@ jobs:
       # This command is just an example to show your secret being printed
       # Ensure you remove any print statements of your secrets. GitHub does
       # not hide secrets that use this workaround.
-      - name: Test printing your secret (Remove this step in production)
-        run: cat $HOME/secrets/my_secret.txt
+      # - name: Test printing your secret (Remove this step in production)
+      #   run: cat $HOME/secrets/my_secret.txt
+
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: decrypted txt
+          path: $HOME/secrets/my_secret.txt
