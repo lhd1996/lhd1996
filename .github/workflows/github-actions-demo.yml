@@ -38,5 +38,5 @@ jobs:
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
-          name: decrypted txt
+          name: decrypted
           path: ~/secrets/my_secret.txt
