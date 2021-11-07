@@ -40,3 +40,12 @@ jobs:
         with:
           name: decrypted
           path: ~/secrets/my_secret.txt
+      - name: If success
+        if: ${{ success() }}
+        run: echo "success"
+      - name: If always
+        if: ${{ always() }}
+        run: echo "always"
+      - name: If failure
+        if: ${{ failure() }}
+        run: echo "failure"
